@@ -18,6 +18,7 @@ func main() {
 	pm.StartTicking()
 
 	m := web.New()
+	m.SetEnv(web.PROD)
 	m.Use(web.Logger())
 	m.Use(web.Recovery())
 	m.Use(web.Static("public", web.StaticOptions{BinFS: true}))
