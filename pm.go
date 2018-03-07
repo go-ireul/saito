@@ -40,7 +40,7 @@ func NewPackageManager(option PackageManagerOption) *PackageManager {
 		pkgs:   make([]Package, 0),
 		mutex:  &sync.RWMutex{},
 	}
-	m.apiURL = fmt.Sprintf("https://api.github.com/orgs/%s/repos", option.Organization)
+	m.apiURL = fmt.Sprintf("https://api.github.com/orgs/%s/repos?per_page=100", option.Organization)
 	return m
 }
 
