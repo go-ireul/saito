@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"ireul.com/web"
+	"magi.systems/net/web"
 )
 
 func main() {
